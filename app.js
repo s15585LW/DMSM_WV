@@ -8,9 +8,8 @@ const app = express()
 
 app.engine('handlebars', exhbs({
     defaultLayout: 'main',
-    helpers: soap, dupa : function (name2, name1) {
-        return name2 + " vs " + name1;
-    }
+    helpers: soap
+    
 }))
 
 
