@@ -1,0 +1,29 @@
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+	  <!-- Navbar brand -->
+	  <a class="navbar-brand" href="/">DOVISTA </a>
+
+	  <!-- Collapse button -->
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+		aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <!-- Collapsible content -->
+	  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+		<!-- Links -->
+		<ul class="navbar-nav mr-auto">
+
+		  <!-- Dropdown -->
+		      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lista poleceń</a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" onclick="setAction(1)">Użytkownicy</a>
+                <a class="dropdown-item" onclick="setAction(2)">Entities</a>
+                <a class="dropdown-item" onclick="setAction(3)">Ent - Parents</a>
+                </div>
+             </li>
+	    </ul>
+    </div>
+</nav>

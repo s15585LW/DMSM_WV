@@ -1,0 +1,71 @@
+<div>
+	<img src="styles/img/Dovista_logo.png" class="Logo">
+ </div>
+
+	<div class="main_panel">
+		<div class="main_action_head" id="main_action_head" >
+				<h4>
+					<p id="actionNum" style="display: inline;"></p> <p id="actionTitle" style="display: inline;">Logowanie</p>
+				</h4>
+		</div>
+		<br>
+			<div class="input-group mb-3 input-group-lg">
+				 <div class="input-group-prepend">
+					<span id="wcname_span" type="text" id="wcname" class="input-group-text" style="width: 150px;"> Stanowisko </span>
+					{{!-- text-success alert-success / tutaj to samo --}}
+				</div>
+				<input type="text" id="wcname" name="wcname"  placeholder="Wprowadź ID stanowiska"  class="form-control" onblur="ValidateUser()">				
+			</div>
+
+			<div class="input-group mb-3 input-group-lg">
+				 <div class="input-group-prepend">
+					<span id="wsname_span" type="text" id="wsname" class="input-group-text" style="width: 150px;"> Workcenter </span>
+					{{!-- text-success alert-success / tutaj to samo --}}
+				</div>
+				<input type="text" id="wsname" name="wsname"  placeholder="...waitnig for scan"  class="form-control" disabled>				
+			</div>
+
+			<div class="input-group mb-3 input-group-lg">
+				 <div class="input-group-prepend">
+					<span type="text" id="fname_span" class="input-group-text " style="width: 150px;">Użytkownik</span>
+					{{!-- input-group-text text-success alert-success / dadaj klasy gdy użytkownik istnieje --}}
+				</div>
+				<input  type="text" id="fname" name="fname"  placeholder="Wprowadź ID pracownika"  class="form-control" onblur="cssChange()">
+			</div>
+			
+		<br>
+		<button id="sublog" name="sublog" onclick="runRequest()" class="btn btn-secondary btn-lg btn-block">Zaloguj</button>
+	</div>
+
+
+<script>
+
+function ValidateUser(){
+	if (document.getElementById("wcname").value != "") {
+		arg = '{"userId":"0001"}'
+    	document.getElementById("fname").value = {{dupa "ValidateUser" "arg" }}
+	}
+		cssChange()
+}
+
+function cssChange() {
+    if(document.getElementById("wcname").value != "" &&
+     	document.getElementById("fname").value != "") {
+		document.getElementById("sublog").className ='btn btn-primary btn-lg btn-block'
+    }else{
+		document.getElementById("sublog").className ='btn btn-secondary btn-lg btn-block'	
+	}
+
+	 if(document.getElementById("fname").value != ""){
+		document.getElementById("fname_span").className ='input-group-text text-success alert-success'
+	 }else{
+		document.getElementById("fname_span").className ='input-group-text'
+	 }
+
+	if(document.getElementById("wcname").value != ""){
+		document.getElementById("wcname_span").className ='input-group-text text-success alert-success'
+	 }else{
+		document.getElementById("wcname_span").className ='input-group-text'
+	}
+}
+</script>

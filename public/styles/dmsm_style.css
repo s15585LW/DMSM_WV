@@ -1,0 +1,98 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+}
+
+footers{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.body_bg {
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image:  linear-gradient(rgba(84,108,131,0.8), rgba(113,134,164,0.95)), url("img/dovista.jpg");
+}
+
+.main_panel{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 500px;
+	background-color: rgb(255,255,255);
+	margin: 0;
+	padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.main_action_head{
+	text-align: center;
+}
+
+.Logo{
+	margin-top: 50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 50px;
+}
+
+canvas.drawing, canvas.drawingBuffer {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Contact page */
+
+aside.sidebar .single {
+	padding: 30px 15px;
+	width: 500px;
+	margin-top: 40px;
+	background: #fcfcfc;
+	border: 1px solid #f0f0f0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+aside.sidebar .single h3.side-title {
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
+	font-size: 20px;
+	color: #333;
+	text-transform: uppercase; }
+
+aside.sidebar .single h3.side-title:after {
+	content: '';
+	width: 60px;
+	height: 1px;
+	background: #00b0ff;
+	display: block;
+	margin-top: 6px; }
+
+.single.contact-info {
+	background: none;
+	border: none; }
+
+.single.contact-info li {
+	margin-top: 30px; }
+
+.single.contact-info li .icon {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #f0f0f0;
+	color: #00b0ff;
+	text-align: center;
+	line-height: 50px; }
+
+.single.contact-info li .info {
+	overflow: hidden; }
